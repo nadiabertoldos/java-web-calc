@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Sistema Inicial</title>
+    </h:head>
+    <h:body>
+        <center style="color: orange; font-family: arial; font-size: 30px">Dados do seguro</center>       
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Nome" style="font-family: arial"></h:outputLabel>                              
+                <p:inputText id="nome" value="#{inicial.nome}"></p:inputText>
+                
+                <h:outputLabel value="Idade" style="font-family: arial"></h:outputLabel>
+                <p:inputText id="idade" value="#{inicial.idade}"></p:inputText>
+                
+                <h:outputLabel value="Sexo" style="font-family: arial"></h:outputLabel>
+                <p:inputText id="sexo" value="#{inicial.sexo}"></p:inputText>
+                
+                <h:outputLabel value="Cidade" style="font-family: arial"></h:outputLabel>
+                <p:inputText id="cidade" value="#{inicial.cidade}"></p:inputText>
+                
+                <h:outputLabel value="Valor inicial do seguro" style="font-family: arial"></h:outputLabel>
+                <p:inputText id="seguro" value="#{inicial.seguro}"></p:inputText>
+                
+                <br></br>
+               
+                <h:outputText value="#{inicial.resultado}" style="font-family: arial"></h:outputText>               
+            </h:panelGrid> 
+            
+            <p:commandButton value="Executar" style="color: orange; margin-left: 50px" action="#{inicial.calculo()}"
+                             update="@form">
+                </p:commandButton>         
+        </h:form>
+    </h:body>
+</html>
+

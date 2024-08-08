@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Número central</title>
+    </h:head>
+    <h:body>
+        <center style="color: blueviolet; font-size: 25px">Número central</center>       
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Informe o primeiro valor"></h:outputLabel>                              
+                <p:inputText id="valor1" value="#{algoritmo.valor1}"></p:inputText>
+                
+                <h:outputLabel value="Informe o segundo valor"></h:outputLabel>
+                <p:inputText id="valor2" value="#{algoritmo.valor2}"></p:inputText>
+                
+                <h:outputLabel value="Informe o terceiro valor"></h:outputLabel>
+                <p:inputText id="valor3" value="#{algoritmo.valor3}"></p:inputText>
+              
+                <h:outputText value="#{algoritmo.resultado}"></h:outputText>               
+            </h:panelGrid> 
+            
+            <p:commandButton value="Enviar" style="color: blueviolet" action="#{algoritmo.valormeio()}"
+                             update="@form">
+                </p:commandButton>         
+        </h:form>
+    </h:body>
+</html>
+
